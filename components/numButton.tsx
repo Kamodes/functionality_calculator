@@ -1,5 +1,7 @@
-const NumButton: React.FC<{ n: number }> = ({ n }) => {
-  return <h1>{n}</h1>;
-};
+import Button from "@mui/material/Button";
 
-export default NumButton;
+export const NumButton: React.FC<{ n: number }> = ({ n }) => {
+  return (
+    <Button className="basis-1/5 bg-sky-300 rounded-lg space-x-2">{n}</Button>
+  );
+};
