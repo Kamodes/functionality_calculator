@@ -27,9 +27,9 @@ const Home: NextPage = () => {
   const [formula, setFormula] = useState<string[]>(["0"]);
   const [answer, setAnswer] = useState<number>(0);
   const [memo, setMemo] = useState<Array<{ name: string; num: number }>>([
-    { name: "a", num: 0 },
+    { name: "a", num: 123 },
   ]);
-  const [index, setIndex] = useState<number>(0);
+  const [index, setIndex] = useState<number>(1);
   const value = {
     formula,
     setFormula,
@@ -46,10 +46,10 @@ const Home: NextPage = () => {
         <Result formula={formula} ans={answer} />
       </div>
       <div className="flex">
-        <div className="basis-1/2">
-          <StoreAnswer memo={memo} />
-        </div>
         <FormulaContext.Provider value={value}>
+          <div className="basis-1/2">
+            <StoreAnswer memo={memo} />
+          </div>
           <div className="basis-1/2">
             <Caluculator />
           </div>
