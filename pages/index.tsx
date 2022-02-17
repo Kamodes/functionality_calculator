@@ -21,6 +21,8 @@ export const FormulaContext = React.createContext(
     >;
     index: number;
     setIndex: React.Dispatch<React.SetStateAction<number>>;
+    isSave: boolean;
+    setIsSave: React.Dispatch<React.SetStateAction<boolean>>;
   }
 );
 const Home: NextPage = () => {
@@ -30,6 +32,7 @@ const Home: NextPage = () => {
     { name: "a", num: 123 },
   ]);
   const [index, setIndex] = useState<number>(1);
+  const [isSave, setIsSave] = useState<boolean>(false);
   const value = {
     formula,
     setFormula,
@@ -39,6 +42,8 @@ const Home: NextPage = () => {
     setMemo,
     index,
     setIndex,
+    isSave,
+    setIsSave,
   };
   return (
     <div>

@@ -24,7 +24,8 @@ export const SubButton = () => {
         setAnswer(answer / Number(num));
         setFormula([String(answer / Number(num)), "-"]);
       } else {
-        console.log("error");
+        const formulaWithoutLast = formula.slice(0, -1);
+        setFormula([...formulaWithoutLast, "-"]);
       }
     }
   };

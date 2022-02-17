@@ -3,10 +3,11 @@ import { useContext } from "react";
 import { FormulaContext } from "../pages";
 
 export const ClearButton = () => {
-  const { setAnswer, setFormula } = useContext(FormulaContext);
+  const { setAnswer, setFormula, setIsSave } = useContext(FormulaContext);
   const clickClearButton = () => {
     setAnswer(0);
     setFormula(["0"]);
+    setIsSave(false);
   };
   return (
     <Button

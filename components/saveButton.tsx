@@ -3,11 +3,13 @@ import { useContext } from "react";
 import { FormulaContext } from "../pages";
 
 export const SaveButton = () => {
-  const { answer, memo, setMemo, index, setIndex } = useContext(FormulaContext);
+  const { answer, memo, setMemo, index, setIndex, setIsSave } =
+    useContext(FormulaContext);
   const clickSaveButton = () => {
     const name = String.fromCharCode(index + 65);
     setMemo([...memo, { name: name, num: answer }]);
     setIndex(index + 1);
+    setIsSave(true);
   };
   return (
     <Button

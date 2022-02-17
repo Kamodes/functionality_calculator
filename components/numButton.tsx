@@ -4,13 +4,20 @@ import { FormulaContext } from "../pages";
 
 export const operatorList: string[] = ["+", "-", "÷", "×"];
 export const NumButton: React.FC<{ n: number }> = ({ n }) => {
-  const { formula, setFormula } = useContext(FormulaContext);
+  const { formula, setFormula, setAnswer, isSave, setIsSave } =
+    useContext(FormulaContext);
   const clickNumButton = () => {
     const last: string = formula.slice(-1)[0];
-    if (operatorList.includes(last)) {
-      setFormula([...formula, String(n)]);
+    if (isSave) {
+      setIsSave(false);
+      setFormula([String(n)]);
+      setAnswer(0);
     } else {
-      setFormula([...formula.slice(0, -1), `${Number(last) * 10 + n}`]);
+      if (operatorList.includes(last)) {
+        setFormula([...formula, String(n)]);
+      } else {
+        setFormula([...formula.slice(0, -1), `${Number(last) * 10 + n}`]);
+      }
     }
   };
   return (
