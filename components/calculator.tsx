@@ -1,5 +1,7 @@
+import { ClearButton } from "./clearButton";
 import { DivButton } from "./divButton";
 import { EmptyButton } from "./emptyButton";
+import { EqualButton } from "./equalButton";
 import { MulButton } from "./mulButton";
 import { NumButton } from "./numButton";
 import { PlusButton } from "./plusButton";
@@ -9,6 +11,12 @@ import { SubButton } from "./subButton";
 export const Caluculator: React.FC = () => {
   return (
     <div className="flex flex-col space-y-1 mx-6 justify-items-center">
+      <div className="flex space-x-1 justify-center">
+        <EmptyButton />
+        <EmptyButton />
+        <EmptyButton />
+        <ClearButton />
+      </div>
       <div className="flex space-x-1 justify-center">
         <NumButton n={7} />
         <NumButton n={8} />
@@ -28,9 +36,9 @@ export const Caluculator: React.FC = () => {
         <SubButton />
       </div>
       <div className="flex space-x-1 justify-center">
-        <EmptyButton />
-        <NumButton n={0} />
         <SaveButton />
+        <NumButton n={0} />
+        <EqualButton />
         <PlusButton />
       </div>
     </div>

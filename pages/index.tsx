@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { NumButton } from "../components/numButton";
 import { Caluculator } from "../components/calculator";
 import { StoreAnswer } from "../components/storeAnswer";
-import { storeAnswerPropType } from "../components/storeAnswer";
-import { Result, resultProps } from "../components/result";
-import { formGroupClasses } from "@mui/material";
-import { stringify } from "querystring";
+import { Result } from "../components/result";
 
 export const FormulaContext = React.createContext(
   {} as {
@@ -26,6 +19,8 @@ export const FormulaContext = React.createContext(
         }[]
       >
     >;
+    index: number;
+    setIndex: React.Dispatch<React.SetStateAction<number>>;
   }
 );
 const Home: NextPage = () => {
@@ -34,7 +29,17 @@ const Home: NextPage = () => {
   const [memo, setMemo] = useState<Array<{ name: string; num: number }>>([
     { name: "a", num: 0 },
   ]);
-  const value = { formula, setFormula, answer, setAnswer, memo, setMemo };
+  const [index, setIndex] = useState<number>(0);
+  const value = {
+    formula,
+    setFormula,
+    answer,
+    setAnswer,
+    memo,
+    setMemo,
+    index,
+    setIndex,
+  };
   return (
     <div>
       <div className="my-14 bg-stone-200">

@@ -8,22 +8,25 @@ export const PlusButton = () => {
     if (formula.length === 1) {
       const num = formula.slice(-1)[0];
       setAnswer(Number(num));
+      setFormula([String(Number(num)), "+"]);
     } else {
       const [ope, num]: string[] = formula.slice(-2);
       if (ope === "+") {
         setAnswer(answer + Number(num));
+        setFormula([String(answer + Number(num)), "+"]);
       } else if (ope === "-") {
         setAnswer(answer - Number(num));
+        setFormula([String(answer - Number(num)), "+"]);
       } else if (ope === "×") {
         setAnswer(answer * Number(num));
+        setFormula([String(answer * Number(num)), "+"]);
       } else if (ope === "÷") {
         setAnswer(answer / Number(num));
+        setFormula([String(answer / Number(num)), "+"]);
       } else {
         console.log("error");
       }
     }
-
-    setFormula([...formula, "+"]);
   };
   return (
     <Button
