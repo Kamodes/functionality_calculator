@@ -1,8 +1,8 @@
 export type resultProps = {
-  formula: string;
+  formula: string[];
   ans: number;
 };
 
 export const Result: React.FC<resultProps> = ({ formula, ans }) => {
-  return <div>{`${formula} = ${ans}`}</div>;
+  return <div>{`${formula.join(" ")} = ${ans}`}</div>;
 };
