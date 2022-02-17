@@ -7,8 +7,9 @@ export const Answer: React.FC<{ name: string; num: number }> = ({
   name,
   num,
 }) => {
-  const { formula, setFormula, setAnswer } = useContext(FormulaContext);
-  const answerButton = () => {
+  const { formula, setFormula, setAnswer, memo, setMemo } =
+    useContext(FormulaContext);
+  const clickAnswerButton = () => {
     if (formula.length === 1) {
       setFormula([String(num)]);
       setAnswer(num);
@@ -22,10 +23,23 @@ export const Answer: React.FC<{ name: string; num: number }> = ({
       }
     }
   };
+  const clickDeleteButton = () => {
+    setMemo(memo.filter((item) => item.name !== name));
+  };
   return (
-    <Button
-      className="text-3xl"
-      onClick={() => answerButton()}
-    >{`${name} = ${num}`}</Button>
+    <div>
+      <Button
+        className="text-3xl"
+        onClick={() => clickAnswerButton()}
+      >{`${name} = ${num}`}</Button>
+      <Button
+        className="text-xl"
+        onClick={() => {
+          clickDeleteButton();
+        }}
+      >
+        削除
+      </Button>
+    </div>
   );
 };
