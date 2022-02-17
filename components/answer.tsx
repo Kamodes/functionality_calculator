@@ -22,5 +22,10 @@ export const Answer: React.FC<{ name: string; num: number }> = ({
       }
     }
   };
-  return <Button onClick={() => answerButton()}>{`${name} = ${num}`}</Button>;
+  return (
+    <Button
+      className="text-3xl"
+      onClick={() => answerButton()}
+    >{`${name} = ${num}`}</Button>
+  );
 };

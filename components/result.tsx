@@ -1,8 +1,11 @@
 export type resultProps = {
   formula: string[];
-  ans: number;
 };
 
-export const Result: React.FC<resultProps> = ({ formula, ans }) => {
-  return <div>{`${formula.join(" ")} = ${ans}`}</div>;
+export const Result: React.FC<resultProps> = ({ formula }) => {
+  return (
+    <div className="mx-auto py-8 font-mono text-center text-5xl bg-stone-200 w-1/2 ">{`${formula.join(
+      " "
+    )}`}</div>
+  );
 };

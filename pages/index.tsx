@@ -47,8 +47,8 @@ const Home: NextPage = () => {
   };
   return (
     <div>
-      <div className="my-14 bg-stone-200">
-        <Result formula={formula} ans={answer} />
+      <div className="my-16">
+        <Result formula={formula} />
       </div>
       <div className="flex">
         <FormulaContext.Provider value={value}>

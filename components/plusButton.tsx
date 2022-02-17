@@ -31,7 +31,7 @@ export const PlusButton = () => {
   };
   return (
     <Button
-      className="basis-1/5 bg-sky-300 rounded-lg space-x-2 h-12"
+      className="font-mono text-3xl basis-1/5 bg-sky-300 rounded-lg space-x-2 h-12"
       onClick={() => {
         clickPlusButton();
       }}
