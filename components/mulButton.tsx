@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { FormulaContext } from "../pages";
 
 export const MulButton = () => {
-  const { formula, setFormula, answer, setAnswer } = useContext(FormulaContext);
+  const { formula, setFormula, answer, setAnswer, setIsSave } =
+    useContext(FormulaContext);
   const clickMulButton = () => {
     if (formula.length === 1) {
       const num = formula.slice(-1)[0];
@@ -28,6 +29,7 @@ export const MulButton = () => {
         setFormula([...formulaWithoutLast, "×"]);
       }
     }
+    setIsSave(false);
   };
   return (
     <Button
