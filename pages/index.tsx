@@ -46,16 +46,16 @@ const Home: NextPage = () => {
     setIsSave,
   };
   return (
-    <div className="bg-stone-100">
-      <div className="my-16">
+    <div className="bg-blue-500">
+      <div className="mt-40">
         <Result formula={formula} />
       </div>
-      <div className="flex bg-stone-100 -mb-48">
+      <div className="flex bg-red-500 ">
         <FormulaContext.Provider value={value}>
-          <div className="basis-1/2">
+          <div className="basis-1/2 bg-orange-400 mt-52">
             <StoreAnswer memo={memo} />
           </div>
-          <div className="basis-1/2">
+          <div className="basis-1/2 bg-yellow-400 mt-52">
             <Caluculator />
           </div>
         </FormulaContext.Provider>

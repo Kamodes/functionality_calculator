@@ -6,7 +6,7 @@ export type storeAnswerPropType = {
 
 export const StoreAnswer: React.FC<storeAnswerPropType> = (prop) => {
   return (
-    <div className="flex justify-center bg-white ">
+    <div className="flex justify-center bg-green-600 ">
       <ul className="flex-row basis-2/3">
         <div className="text-center font-mono text-2xl">保存した値</div>
         {prop.memo.map((answer: { name: string; num: number }) => (
