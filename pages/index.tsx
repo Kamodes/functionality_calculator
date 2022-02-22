@@ -3,6 +3,8 @@ import type { NextPage } from "next";
 import { Caluculator } from "../components/calculator";
 import { StoreAnswer } from "../components/storeAnswer";
 import { Result } from "../components/result";
+import { Header } from "../components/header";
+import Link from "next/link";
 
 export const FormulaContext = React.createContext(
   {} as {
@@ -47,15 +49,18 @@ const Home: NextPage = () => {
   };
   return (
     <div className="bg-blue-500">
-      <div className="mt-40">
+      <div className="bg-white">
+        <Header />
+      </div>
+      <div className="mt-16">
         <Result formula={formula} />
       </div>
-      <div className="flex bg-red-500 ">
+      <div className="flex bg-red-500 mt-32">
         <FormulaContext.Provider value={value}>
-          <div className="basis-1/2 bg-orange-400 mt-52">
+          <div className="basis-1/2 bg-orange-400 ">
             <StoreAnswer memo={memo} />
           </div>
-          <div className="basis-1/2 bg-yellow-400 mt-52">
+          <div className="basis-1/2 bg-yellow-400 ">
             <Caluculator />
           </div>
         </FormulaContext.Provider>
