@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       <div className="flex  mt-32">
         <FormulaContext.Provider value={value}>
           <EmptyFlex sep={"1/12"} />
-          <div className="basis-1/3 border-4 rounded-lg ">
+          <div className="basis-1/3 border-4 rounded-3xl ">
             <StoreAnswer memo={memo} />
           </div>
           <EmptyFlex sep={"1/12"} />
