@@ -29,11 +29,11 @@ export const Answer: React.FC<{ name: string; num: number }> = ({
   return (
     <div>
       <Button
-        className="text-3xl"
+        className="text-3xl text-emerald-500"
         onClick={() => clickAnswerButton()}
       >{`${name} = ${num}`}</Button>
       <Button
-        className="text-xl"
+        className="text-2xl text-emerald-400"
         onClick={() => {
           clickDeleteButton();
         }}

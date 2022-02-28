@@ -1,3 +1,3 @@
-export const EmptyFlex = (props: { basis: string }) => {
-  return <div className={"basis-" + props.basis}></div>;
+export const EmptyFlex = (props: { sep: string }) => {
+  return <div className={"basis-" + props.sep}></div>;
 };

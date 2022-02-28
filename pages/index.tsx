@@ -5,6 +5,7 @@ import { StoreAnswer } from "../components/storeAnswer";
 import { Result } from "../components/result";
 import { Header } from "../components/header";
 import Link from "next/link";
+import { EmptyFlex } from "../components/emptyFlex";
 
 export const FormulaContext = React.createContext(
   {} as {
@@ -48,19 +49,21 @@ const Home: NextPage = () => {
     setIsSave,
   };
   return (
-    <div className="bg-blue-500">
-      <div className="bg-white">
+    <div className="bg-white">
+      <div className="bg-gray-50">
         <Header />
       </div>
       <div className="mt-16">
         <Result formula={formula} />
       </div>
-      <div className="flex bg-red-500 mt-32">
+      <div className="flex  mt-32">
         <FormulaContext.Provider value={value}>
-          <div className="basis-1/2 bg-orange-400 ">
+          <EmptyFlex sep={"1/12"} />
+          <div className="basis-1/3 border-4 rounded-lg ">
             <StoreAnswer memo={memo} />
           </div>
-          <div className="basis-1/2 bg-yellow-400 ">
+          <EmptyFlex sep={"1/12"} />
+          <div className="basis-1/2 ">
             <Caluculator />
           </div>
         </FormulaContext.Provider>

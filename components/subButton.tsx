@@ -33,7 +33,7 @@ export const SubButton = () => {
   };
   return (
     <Button
-      className="text-5xl basis-1/5 bg-sky-300 rounded-lg space-x-2 h-12"
+      className="text-5xl basis-1/5 bg-gray-100 text-gray-600 rounded-lg space-x-2 h-12"
       onClick={() => {
         clickSubButton();
       }}

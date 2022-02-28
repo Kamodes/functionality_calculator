@@ -51,7 +51,7 @@ export const SaveButton = () => {
   };
   return (
     <Button
-      className="text-3xl font-mono basis-1/5 bg-sky-300 rounded-lg space-x-2 h-12"
+      className="text-3xl font-mono basis-1/5 bg-emerald-200 text-gray-500 rounded-lg space-x-2 h-12"
       onClick={() => {
         clickSaveButton();
       }}

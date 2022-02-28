@@ -30,7 +30,7 @@ export const EqualButton = () => {
   };
   return (
     <Button
-      className="text-3xl basis-1/5 bg-sky-300 rounded-lg space-x-2 h-12"
+      className="text-3xl basis-1/5 bg-gray-100 text-gray-600 rounded-lg space-x-2 h-12"
       onClick={() => clickEqualButton()}
     >
       {"="}
