@@ -8,7 +8,7 @@ export const Header = () => {
     <div className="flex">
       <div className="ml-24 mt-4">
         <Image
-          src={"/../public/images/logo_func_cul.png"}
+          src={"/../public/images/logo_func_cul.JPG"}
           alt={"logo"}
           width={200}
           height={120}
