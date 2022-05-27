@@ -5,7 +5,7 @@ import { StoreAnswer } from "../components/storeAnswer";
 import { Result } from "../components/result";
 import { Header } from "../components/header";
 import Link from "next/link";
-import { EmptyFlex } from "../components/emptyFlex";
+import { EmptyFlex1_12 } from "../components/emptyFlex1_12";
 
 export const FormulaContext = React.createContext(
   {} as {
@@ -58,11 +58,11 @@ const Home: NextPage = () => {
       </div>
       <div className="flex  mt-32">
         <FormulaContext.Provider value={value}>
-          <EmptyFlex sep={"1/12"} />
+          <EmptyFlex1_12 />
           <div className="basis-1/3 border-4 rounded-3xl ">
             <StoreAnswer memo={memo} />
           </div>
-          <EmptyFlex sep={"1/12"} />
+          <EmptyFlex1_12 />
           <div className="basis-1/2 ">
             <Caluculator />
           </div>

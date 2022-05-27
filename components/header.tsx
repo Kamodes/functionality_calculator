@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { EmptyFlex } from "./emptyFlex";
+import { EmptyFlex1_2 } from "./emptyFlex1_2";
 import { HeaderButton } from "./headerButton";
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
           objectFit="contain"
         />
       </div>
-      <EmptyFlex sep="1/2" />
+      <EmptyFlex1_2 />
       <div className="flex-row">
         <HeaderButton label="このサイトについて" />
         <HeaderButton label="新規登録" />
