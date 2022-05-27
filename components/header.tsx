@@ -5,7 +5,7 @@ import { HeaderButton } from "./headerButton";
 
 export const Header = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-gray-50">
       <div className="ml-24 mt-4">
         <Image
           src={"/../public/images/logo_func_cul.JPG"}
