@@ -22,7 +22,7 @@ export const NumButton: React.FC<{ n: number }> = ({ n }) => {
   };
   return (
     <Button
-      className="basis-1/5 text-3xl bg-gray-200 text-gray-500 rounded-lg space-x-2 h-12"
+      className="bg-gray-200 basis-1/5 text-3xl text-gray-500 rounded-lg space-x-2 h-12"
       onClick={() => {
         clickNumButton();
       }}

@@ -50,7 +50,7 @@ const Home: NextPage = () => {
   };
   return (
     <div className="bg-white">
-      <div className="">
+      <div className="bg-gray-50">
         <Header />
       </div>
       <div className="mt-16">
